@@ -1,0 +1,321 @@
+body {
+  overflow-x: hidden;
+  font-family: open sans, montserrat, sans-serif;
+  color: #3e4145;
+  font-weight: 500;
+  font-size: 16px;
+  background: silver;
+}
+
+/*============= TOP BAR HEADER =============*/
+
+.top-bar {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem !important;
+  margin: auto 2px !important;
+  background: rgb(154, 154, 154);
+  vertical-align: center !important;
+  a {
+    text-decoration: none;
+    color: rgb(32, 32, 32);
+    :hover,
+    :focus {
+      outline: none;
+      text-decoration: underline;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .top-bar {
+    height: 1.2rem;
+    font-size: 0.6rem;
+    padding-top: 0.2rem !important;
+    img {
+      width: 2.2rem;
+      height: 1.1rem;
+    }
+  }
+}
+
+/*============= NAVIGATION =============*/
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar {
+  padding: 0.25rem 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+  //background: rgb(27, 27, 27)!important;
+  background: black !important;
+  z-index: 1;
+  .navbar-brand img {
+    height: 3.5rem;
+    font-size: 2rem;
+  }
+}
+.nav-item {
+  padding: 0.3rem;
+}
+.nav-link {
+  color: rgb(145, 145, 145) !important;
+  transition: color 0.3s 0.1s;
+}
+.btn {
+  transition: background 0.3s 0.1s;
+}
+.nav-link.active,
+.nav-link:hover,
+.nav-link:focus,
+.navbar-brand {
+  outline: none;
+  color: rgb(218, 218, 218) !important;
+}
+
+/*============= CAROUSEL =============*/
+#slider {
+  z-index: 0;
+  box-shadow: 0 1rem 1rem rgba(146, 160, 156, 0.3);
+}
+.carousel-button {
+  .card {
+    background: transparent;
+    border: solid 0.1px rgb(111, 106, 106) !important;
+    border-radius: 0.4rem;
+  }
+}
+
+.carousel-button {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+/*---Change Carousel Transition Speed --*/
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  transition: transform 1.2s ease;
+}
+
+/*-- Carousel Content --*/
+// About index starting
+.img-about {
+  background: #2a2a2a !important;
+  display: inline-block;
+  border-radius: 2% !important;
+  box-shadow: 0 1rem 1rem rgba(50, 30, 50, 0.7) !important;
+}
+.about {
+  .text-about {
+    display: inline-block;
+    color: white;
+    padding: 1rem 3rem !important;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .text-about {
+    font-size: 1rem !important;
+  }
+  .img-about {
+    width: 90%;
+    margin: auto !important;
+  }
+}
+
+// About index ending
+/*===== FIXED BACKGROUND IMG =====*/
+// bg-img with text and button
+
+header.bg-home {
+  height: 25rem;
+  background-image: url(../img/cool-line.jpg);
+  background-size: cover;
+  text-align: center;
+  .bg-text {
+    padding: 2rem 1rem !important;
+    width: 50%;
+    // margin: 3rem 2rem auto auto !important;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 768px) {
+  .bg-text {
+    padding: 3rem 2rem !important;
+    width: 80% !important;
+  }
+}
+// ending
+
+//Contact starting
+#contact {
+  .contact-text {
+    height: 20rem;
+  }
+  p {
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: black !important;
+  }
+}
+//Contact ending
+/*============= Gallery =============*/
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-70%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.gallery-top {
+  margin: 1rem auto !important;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  display: block;
+  border-radius: 5rem;
+  border: 1px black solid;
+  padding: 0 0 !important;
+  background: silver !important;
+}
+
+#gallery-slider,
+#header-slider {
+  z-index: 0;
+}
+
+.nav-gallery {
+  .nav-link {
+    transition: color 0.5s, background-color 0.5s;
+    background: rgb(39, 39, 39);
+    color: rgb(155, 155, 155) !important;
+    .active,
+    :hover {
+      background: #8c8c8c !important;
+      color: #515151 !important;
+    }
+  }
+}
+.img-col {
+  width: 100%;
+  margin: 1rem auto;
+  height: auto;
+}
+a .col-sm-4 {
+  margin: 1rem auto !important;
+}
+.gallery-img {
+  width: 100%;
+  height: auto;
+  margin: 1rem !important;
+  transition-duration: 0.6s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.2s;
+  opacity: 1;
+  :hover {
+    display: none !important;
+
+    opacity: 0.3;
+  }
+}
+
+/*============= FOOTER =============*/
+footer {
+  background: rgb(0, 0, 0);
+  font-size: 0.9rem;
+  a.nav-link {
+    margin: 0.5rem;
+  }
+  img {
+    max-height: 6rem !important;
+  }
+
+  .social-link {
+    padding: 0 !important;
+    margin: 0.7rem 0.6rem !important;
+  }
+  i {
+    transition: color 0.3s 0.01s !important;
+  }
+  .fa-facebook-square:hover {
+    color: #4267b2 !important;
+  }
+  .fa-twitter:hover {
+    color: #1da1f2 !important;
+  }
+  .fa-youtube-square:hover {
+    color: red !important;
+  }
+  .fa-pinterest-square:hover {
+    color: #f0002a !important;
+  }
+  .fa-instagram:hover {
+    color: #a559b1 !important;
+  }
+}
+
+/*============= SOCKET =============*/
+.socket {
+  background: rgb(34, 34, 34);
+  padding: 0.8rem 0 !important;
+  border: 1px;
+  vertical-align: middle;
+  a {
+    :hover {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}
+
+/*============= MEDIA QUERIES =============*/
+
+/* Devices under 1199px (xl) */
+@media (max-width: 1199.98px) {
+}
+/* Devices under 768px (md) */
+@media (max-width: 768px) {
+  .top-bar {
+    height: 2rem;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+  }
+  body {
+    font-size: 0.9rem !important;
+  }
+}
+
+/*============ BOOTSTRAP BREAK POINTS:
+  
+  Extra small (xs) devices (portrait phones, less than 576px)
+  No media query since this is the default in Bootstrap
+  
+  Small (sm) devices (landscape phones, 576px and up)
+  @media (min-width: 576px) { ... }
+  
+  Medium (md) devices (tablets, 768px and up)
+  @media (min-width: 768px) { ... }
+  
+  Large (lg) devices (desktops, 992px and up)
+  @media (min-width: 992px) { ... }
+  
+  Extra (xl) large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) { ... }
+  
+  =============*/
+
+/*-- Bootstrap Mobile Gutter Fix --*/
